@@ -9,6 +9,18 @@ software. The final design was fairly simple, and mostly relied on Vivado's
 ability to automatically upgrade IP (although clocking and AXI-related stuff
 required some intervention).
 
+### Using the Demo
+
+A small demo is included which reads the MHS and XMP files in a XPS project and
+prints some information about them. It should serve as a good starting point for
+manipulating the data structures returned by `parse_mhs` and `parse_xps`.
+
+As an example, to read and print information about an XPS project located in the
+directory `~/Desktop/Project/`, you would run:
+```sh
+$ python -m xps_convert ~/Desktop/Project/
+```
+
 ### Helpful Documentation
 
 Aside from looking at a lot of `.mhs` and `.bd` files, here is some
