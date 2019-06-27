@@ -1,7 +1,7 @@
 import re
 from typing import Iterator
 
-from xps_convert.read.mhs_parser import ParseError
+from xps_convert.read.errors import ParseError
 from xps_convert.read.xmp import Xmp
 
 FIELD_RE = re.compile(r"([\w\s]+):\s(.*)")

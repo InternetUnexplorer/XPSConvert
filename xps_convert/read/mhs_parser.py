@@ -1,14 +1,8 @@
 import re
-from typing import Iterator, Optional
+from typing import Iterator
 
+from xps_convert.read.errors import ParseError
 from xps_convert.read.mhs import MhsRoot, MhsComponent
-
-
-class ParseError(BaseException):
-    def __init__(self, message: str, filename: str, line: Optional[int] = None) -> None:
-        location = f"{filename}:{line + 1}" if line is not None else filename
-        super().__init__(f"{location}: {message}")
-
 
 COMMENT_RE = re.compile(r"#.*")
 ASSIGNMENT_RE = re.compile(r"(\w+)\s+(\w+)\s*=\s*(.*)")
